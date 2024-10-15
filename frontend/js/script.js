@@ -111,7 +111,7 @@ const handleLogin = (event) => {
     login.style.display = "none"
     chat.style.display = "flex"
 
-    websocket = new WebSocket("ws://localhost:8080/ws")
+    websocket = new WebSocket("wss://chat-backend-skek.onrender.com")
     websocket.onmessage = processMessage
     websocket.onerror = (error) => {
         console.error("WebSocket error:", error)
